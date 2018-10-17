@@ -30,27 +30,27 @@ public class BalancedPar
 				else if(tempChar == ')') 
 				{
 					char temp = (char)(holdBraces.pop());
-
+					// If the char that is popped off does not match brace type, then return false
 					if(temp == '{' || temp == '[')
 					{
 						return false;
 					}
 				}
-
+				// The the temp Char is "]" then pop off stack
 				else if(tempChar == ']') 
 				{
 					char temp = (char)(holdBraces.pop());
-
+					// If the char that is popped off does not match brace type, then return false
 					if(temp == '{' || temp == '(')
 					{
 						return false;
 					}
 				}
-
+				// The the temp Char is "}" then pop off stack
 				else if(tempChar == '}') 
 				{
 					char temp = (char)(holdBraces.pop());
-
+					// If the char that is popped off does not match brace type, then return false
 					if(temp == '(' || temp == '[')
 					{
 						return false;
@@ -62,7 +62,8 @@ public class BalancedPar
 
 	}
 
-	// This method checks for balanced parentheses
+	// This method checks for balanced parentheses only with 
+	// no additional data structures allowed.
 	public static boolean isBalanced(String str)
 	{
 		int Balanced = 0;
